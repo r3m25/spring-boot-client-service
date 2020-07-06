@@ -1,0 +1,8 @@
+name: acl.client
+
+server:
+  servlet:
+    context-path: /r3m25/api/${name}/v1
+
+jsonplaceholder:
+  url: https://jsonplaceholder.typicode.com/
