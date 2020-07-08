@@ -1,9 +1,9 @@
-package com.r3m25.acl.client.controller;
+package com.r3m25.client.controller;
 
 import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 
-import com.r3m25.acl.client.domain.Customer;
-import com.r3m25.acl.client.service.CustomerService;
+import com.r3m25.client.domain.Customer;
+import com.r3m25.client.service.CustomerService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;

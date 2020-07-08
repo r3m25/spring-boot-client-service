@@ -1,13 +1,13 @@
-package com.r3m25.acl.client.adapter;
+package com.r3m25.client.adapter;
 
-import com.r3m25.acl.client.client.UserClient;
-import com.r3m25.acl.client.domain.Customer;
-import com.r3m25.acl.client.mapper.CustomerMapper;
-import org.springframework.stereotype.Component;
+import com.r3m25.client.client.UserClient;
+import com.r3m25.client.configuration.anotation.Adapter;
+import com.r3m25.client.domain.Customer;
+import com.r3m25.client.mapper.CustomerMapper;
 
 import java.util.List;
 
-@Component
+@Adapter
 public class CustomerAdapter {
 
     private final UserClient userClient;
@@ -24,11 +24,11 @@ public class CustomerAdapter {
     }
 
     public Customer getCustomerById(String id) {
-        return null;
+        return customerMapper.userClientToCustomer(userClient.getUserById(id));
     }
 
     public List<Customer> getAllCustomers() {
-        return null;
+        return customerMapper.userClientListToCustomerList(userClient.getAllUser());
     }
 
 }

@@ -1,4 +1,4 @@
-package com.r3m25.acl.client.client.domain;
+package com.r3m25.client.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -9,13 +9,15 @@ import lombok.NoArgsConstructor;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class User {
-    private Integer id;
+public class Customer {
+
+    private String customerId;
     private String name;
     private String username;
     private String email;
-    private Address address;
+    private String address;
     private String phone;
     private String webSite;
-    private Company company;
+    private String company;
+
 }

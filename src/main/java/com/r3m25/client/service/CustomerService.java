@@ -1,7 +1,7 @@
-package com.r3m25.acl.client.service;
+package com.r3m25.client.service;
 
-import com.r3m25.acl.client.adapter.CustomerAdapter;
-import com.r3m25.acl.client.domain.Customer;
+import com.r3m25.client.adapter.CustomerAdapter;
+import com.r3m25.client.domain.Customer;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
