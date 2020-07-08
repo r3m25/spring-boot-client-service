@@ -17,7 +17,8 @@ public interface CustomerMapper {
 
     @Mappings({
             @Mapping(target="address", source = "address" , qualifiedBy = CustomerAddress.class),
-            @Mapping(target="company", source="user.company.name")
+            @Mapping(target="company", source="user.company.name"),
+            @Mapping(target="customerId", source="user.id")
     })
     Customer userClientToCustomer(User user);
 

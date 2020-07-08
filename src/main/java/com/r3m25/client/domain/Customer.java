@@ -10,14 +10,13 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Customer {
-
     private String customerId;
     private String name;
     private String username;
     private String email;
     private String address;
     private String phone;
-    private String webSite;
+    private String website;
     private String company;
 
 }
