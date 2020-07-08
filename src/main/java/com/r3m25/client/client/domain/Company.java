@@ -1,4 +1,4 @@
-package com.r3m25.acl.client.client.domain;
+package com.r3m25.client.client.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -9,7 +9,8 @@ import lombok.NoArgsConstructor;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class Geo {
-    private Double lat;
-    private Double lng;
+public class Company {
+    private String name;
+    private String catchPhrase;
+    private String bs;
 }

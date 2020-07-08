@@ -1,4 +1,4 @@
-package com.r3m25.acl.client.client.domain;
+package com.r3m25.client.client.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
