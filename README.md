@@ -15,11 +15,18 @@ Java 1.8
 ```
 MapStruct.
 Feign.
-Custom Excpetions.
-Custom Anotations.
 Mockito Framework.
 Wiremock.
 piTest.
+```
+
+### Examples
+
+Here, you gonna find different examples to create quick implementations in Spring Boot, for example:
+
+```
+Consumer json.
+Create Custom Excpetions and Anotations.
 ```
 
 ## Running the tests
