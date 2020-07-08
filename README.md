@@ -1,10 +1,8 @@
-# Client Service - Spring Boot Example.-
-
-Examples Spring Boot.
-
-## Getting Started
+# Client Service - Spring Boot Example.
 
 In this project I have been creating content with diferents tools and libraries that we can use in own project.
+
+## Getting Started
 
 ### Prerequisites
 
@@ -15,7 +13,10 @@ Java 1.8
 ### Libraries
 
 ```
+MapStruct.
 Feign.
+Custom Excpetions.
+Custom Anotations.
 Mockito Framework.
 Wiremock.
 piTest.
