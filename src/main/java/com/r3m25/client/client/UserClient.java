@@ -1,7 +1,7 @@
-package com.r3m25.acl.client.client;
+package com.r3m25.client.client;
 
-import com.r3m25.acl.client.client.domain.User;
-import org.springframework.cloud.netflix.feign.FeignClient;
+import com.r3m25.client.client.domain.User;
+import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
