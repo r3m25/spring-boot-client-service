@@ -4,6 +4,7 @@ import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 
 import com.r3m25.client.domain.Customer;
 import com.r3m25.client.service.CustomerService;
+import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,13 +15,10 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/customer")
+@AllArgsConstructor
 public class CustomerController {
 
     private final CustomerService customerService;
-
-    public CustomerController(CustomerService customerService) {
-        this.customerService = customerService;
-    }
 
     @GetMapping(value = "/{customerId}", produces = APPLICATION_JSON_VALUE)
     public ResponseEntity<Customer> findCustomerById(@PathVariable String customerId) {
@@ -29,7 +27,7 @@ public class CustomerController {
 
     @GetMapping(value = "/all", produces = APPLICATION_JSON_VALUE)
     public ResponseEntity<List<Customer>> getAllCustomers() {
-        return new ResponseEntity<>(customerService.getAllCustomers(),HttpStatus.OK);
+        return new ResponseEntity<>(customerService.getCustomers(),HttpStatus.OK);
     }
 
 }

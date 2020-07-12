@@ -8,7 +8,7 @@
 		<version>2.3.1.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.r3m25.acl</groupId>
+	<groupId>com.r3m25</groupId>
 	<artifactId>client</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>r3m25-client-service</name>
@@ -29,7 +29,6 @@
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-openfeign</artifactId>
 		</dependency>
-
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
@@ -57,7 +56,6 @@
 			<artifactId>mapstruct-jdk8</artifactId>
 			<version>${map.struct}</version>
 		</dependency>
-
 		<dependency>
 			<groupId>org.mapstruct</groupId>
 			<artifactId>mapstruct-processor</artifactId>
@@ -68,7 +66,18 @@
             <artifactId>commons-lang</artifactId>
             <version>2.4</version>
         </dependency>
-    </dependencies>
+		<dependency>
+			<groupId>com.github.tomakehurst</groupId>
+			<artifactId>wiremock-jre8</artifactId>
+			<version>2.27.0</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.google.guava</groupId>
+			<artifactId>guava</artifactId>
+			<version>29.0-jre</version>
+		</dependency>
+	</dependencies>
 
 	<dependencyManagement>
 		<dependencies>
@@ -87,6 +96,37 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+			<plugin>
+				<groupId>org.pitest</groupId>
+				<artifactId>pitest-maven</artifactId>
+				<version>1.5.2</version>
+				<dependencies>
+					<dependency>
+						<groupId>org.pitest</groupId>
+						<artifactId>pitest-junit5-plugin</artifactId>
+						<version>0.12</version>
+					</dependency>
+				</dependencies>
+				<configuration>
+					<reportsDirectory>${project.build.directory}/mutation-test</reportsDirectory>
+					<excludedClasses>
+						<excludedClass>com.r3m25.client.configuration.*</excludedClass>
+						<excludedClass>com.r3m25.client.client.configuration.*</excludedClass>
+						<excludedClass>com.r3m25.client.client.domain.*</excludedClass>
+						<excludedClass>com.r3m25.client.domain.*</excludedClass>
+						<excludedClass>com.r3m25.client.Application</excludedClass>
+						<excludedClass>com.r3m25.client.dummies.*</excludedClass>
+						<excludedClass>com.r3m25.client.exception.*</excludedClass>
+					</excludedClasses>
+					<timestampedReports>false</timestampedReports>
+					<threads>8</threads>
+					<mutationThreshold>100</mutationThreshold>
+					<coverageThreshold>100</coverageThreshold>
+					<outputFormats>
+						<outputFormat>HTML</outputFormat>
+					</outputFormats>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>

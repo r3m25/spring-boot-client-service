@@ -1,6 +1,6 @@
 # Client Service - Spring Boot Example.
 
-In this repo I have been creating content with diferents tools and libraries that they can use in your own projects.
+In this repo you can find implemeations whit usefuls tools for spring boot for example a sample integration test, mutation a unit test, also how to mapper whit mapStruct and consumer a service whit feign.
 
 ## Getting Started
 
@@ -8,6 +8,10 @@ In this repo I have been creating content with diferents tools and libraries tha
 
 ```
 Java 1.8
+wiremock-jre8.
+mapstruct-jdk8.
+mapstruct-processor.
+pitest-junit5-plugin.
 ```
 
 ### Libraries and Tools
@@ -33,10 +37,11 @@ Create Custom Exceptions and Anotations.
 ## Running the tests
 
 ```
-Unit Test.
-Integration Test.
-Mutation Test.
+Unit Test: mvn test.
+Integration Test: mvn test.
+Mutation Test: mvn org.pitest:pitest-maven:mutationCoverage.
 ```
+Mutation test generate repoort in terget folder. you must find "mutation-test folder".
 
 
 ## Built With
