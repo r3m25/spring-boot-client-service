@@ -1,6 +1,6 @@
 # Client Service - Spring Boot Example.
 
-In tehis repo you can find implemeations whit commons tools for spring boot.
+In this repo you can find implemeations whit usefuls tools for spring boot for example a sample integration test, mutation a unit test, also how to mapper whit mapStruct and consumer a service whit feign.
 
 ## Getting Started
 
